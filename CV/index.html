@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJPEG Stream Viewer</title>
+</head>
+<body>
+    <h1>MJPEG Stream Viewer</h1>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
+
+<html>
+    <head>
+        <title>Raspberry Pi Robot</title>
+        <script>
+            // Send commands to the server for motor control
+            function sendCommand(direction, action) {
+                fetch('/' + direction, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `action=${action}`
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Raspberry Pi Robot</h1>
+        <h2>Camera Stream</h2>
+        <img src="/video_feed" width="640" height="480">
+        <h2>Controls</h2>
+        <button onclick="sendCommand('stop', 'press')">Stop</button>
+    </body>
+    </html>
