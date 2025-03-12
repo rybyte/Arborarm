@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YOLOv8 NCNN Live Stream</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Live Object Detection</h1>
+    <div>
+        <img id="videoFeed" src="/video_feed" width="640">
+    </div>
+    <button onclick="toggleStream()">Start/Stop Stream</button>
+    <script>
+        function toggleStream() {
+            fetch('/toggle_stream', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.streaming) {
+                        document.getElementById("videoFeed").src = "/video_feed";
+                    } else {
+                        document.getElementById("videoFeed").src = "";
+                    }
+                });
+        }
+    </script>
+</body>
+</html>
