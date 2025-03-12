@@ -1,21 +1,44 @@
 #!/usr/bin/env bash
-#!/bin/bash
 
-# Run the first Python script in the background
-python readFromUART.py &
-PID1=$!
+# Run Python scripts in the background and store their PIDs
+#python readFromUART.py & 
+#PID1=$!
 
-# Wait for 2 seconds
+#sleep 2
+
+#python turningMotor.py & #
+#PID2=$!
+
+#sleep 2
+python mergeUART.py & #
+PID5=$!
+
 sleep 2
 
-# Run the second Python script in the background
-python turningMotor.py &
-PID2=$!
+python modTurningMotor.py & 
+PID3=$!
 
-# Trap SIGINT to kill both processes
-trap 'kill $PID1 $PID2; exit' SIGINT
+sleep 2
+#python readFromUART_11.py & 
+#PID3=$!
+
+#sleep 2
+
+python modTurningMotor_11.py & 
+PID4=$!
+
+# Function to handle cleanup
+cleanup() {
+    echo "Stopping all processes..."
+    #kill $PID1 $PID2 $PID3 $PID4 2>/dev/null
+    kill $PID4 $PID3 $PID5 2>/dev/null
+
+    wait
+    exit
+}
+
+# Trap SIGINT (Ctrl+C) and call cleanup function
+trap cleanup SIGINT
 
 # Wait indefinitely
 while true; do sleep 1; done
-
-
