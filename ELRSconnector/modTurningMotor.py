@@ -7,33 +7,20 @@ import time
 motor = Motor(forward=17, backward=18)
 pwm = PWMOutputDevice(27)
 
-position = 100
-MIN_POS = 0
-MAX_POS = 1200
 current = None  # Tracks last received data to avoid redundant actions
 
 def move_forward():
     """Starts moving forward."""
-    global position
-    if position < MAX_POS:
-        print("Moving Forward...")
-        pwm.value = 0.5
-        motor.forward()
-        position += 1 
-    else:
-        stop_motor()
+    print("Moving Forward...")
+    pwm.value = 0.5
+    motor.forward()
+
 
 def move_backward():
     """Starts moving backward."""
-    global position
-    if position > MIN_POS:
-        print("Moving Backward...")
-        pwm.value = 0.5
-        motor.backward()
-        position -= 1
-        time.sleep(0.02)
-    else:
-        stop_motor()
+    print("Moving Backward...")
+    pwm.value = 0.5
+    motor.backward()
 
 def stop_motor():
     """Stops the motor."""
