@@ -27,6 +27,8 @@ sleep 2
 python modTurningMotor_11.py & 
 PID4=$!
 
+./dual_camera.sh &
+
 # Function to handle cleanup
 cleanup() {
     echo "Stopping all processes..."
