@@ -28,12 +28,13 @@ python modTurningMotor_11.py &
 PID4=$!
 
 ./dual_camera.sh &
+PID6=$!
 
 # Function to handle cleanup
 cleanup() {
     echo "Stopping all processes..."
     #kill $PID1 $PID2 $PID3 $PID4 2>/dev/null
-    kill $PID4 $PID3 $PID5 2>/dev/null
+    kill $PID4 $PID3 $PID5 $PID6 2>/dev/null
 
     wait
     exit
