@@ -43,45 +43,61 @@ def extract_channel(data, channel_index):
 def handleCrsfPacket(ptype, data):
     try:
         if ptype == PacketsTypes.RC_CHANNELS_PACKED:
-            # Extract channel 5 and channel 11 values
-            channel_5_value = extract_channel(data[3:], channel_index=5)
-            #channel_5_value, channel_11_value = channel_values
+            channel_6_value = extract_channel(data[3:], channel_index=5)
+            channel_7_value = extract_channel(data[3:], channel_index=6)
+            #channel_10_value = extract_channel(data[3:], channel_index=9)
             channel_11_value = extract_channel(data[3:], channel_index=10)
         else:
             pass
-        return str(channel_5_value), str(channel_11_value)  # Convert to string for socket transmission
+        return str(channel_6_value), str(channel_7_value), str(channel_11_value)
     except:
-        return "0", "0"
+        return "0", "0", "0"
 
 
 # Parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('-P', '--port', default='/dev/ttyAMA0', required=False)
 parser.add_argument('-b', '--baud', default=420000, required=False)
-parser.add_argument('--socket_port_5', default=65432, type=int, required=False)
+parser.add_argument('--socket_port_6', default=65432, type=int, required=False)
+parser.add_argument('--socket_port_7', default=65431, type=int, required=False)
+#parser.add_argument('--socket_port_10', default=65434, type=int, required=False)
 parser.add_argument('--socket_port_11', default=65433, type=int, required=False)
 args = parser.parse_args()
 
 # Create two sockets (one for each channel)
-server_socket_5 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket_5.bind(('localhost', args.socket_port_5))
-server_socket_5.listen(1)  
+server_socket_6 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket_6.bind(('localhost', args.socket_port_6))
+server_socket_6.listen(1)  
+
+server_socket_7 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket_7.bind(('localhost', args.socket_port_7))
+server_socket_7.listen(1)  
+
+#server_socket_10 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#server_socket_10.bind(('localhost', args.socket_port_10))
+#server_socket_10.listen(1)
 
 server_socket_11 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket_11.bind(('localhost', args.socket_port_11))
 server_socket_11.listen(1)
 
-print(f"Socket server listening on port {args.socket_port_5} for Channel 5...")
+print(f"Socket server listening on port {args.socket_port_6} for Channel 6...")
+print(f"Socket server listening on port {args.socket_port_7} for Channel 7...")
+#print(f"Socket server listening on port {args.socket_port_10} for Channel 10...")
 print(f"Socket server listening on port {args.socket_port_11} for Channel 11...")
 
 # Accept client connections
-conn_5, addr_5 = server_socket_5.accept()
-print(f"Connected to Channel 5 client {addr_5}")
+conn_6, addr_6 = server_socket_6.accept()
+print(f"Connected to Channel 6 client {addr_6}")
+
+conn_7, addr_7 = server_socket_7.accept()
+print(f"Connected to Channel 7 client {addr_7}")
+
+#conn_10, addr_10 = server_socket_10.accept()
+#print(f"Connected to Channel 10 client {addr_10}")
 
 conn_11, addr_11 = server_socket_11.accept()
 print(f"Connected to Channel 11 client {addr_11}")
-# Modified socket setup (first script)
-
 
 with serial.Serial(args.port, args.baud, timeout=2) as ser:
     input_buffer = bytearray()
@@ -103,16 +119,32 @@ with serial.Serial(args.port, args.baud, timeout=2) as ser:
                 if not crsf_validate_frame(single_packet):
                     print("CRC error")
                 else:
-                    channel_5_state, channel_11_state = handleCrsfPacket(single_packet[2], single_packet)
-                    channel_5_state_str = str(channel_5_state)
+                    channel_6_state, channel_7_state, channel_11_state = handleCrsfPacket(single_packet[2], single_packet)
+                    channel_6_state_str = str(channel_6_state)
+                    channel_7_state_str = str(channel_7_state)
+                    #channel_10_state_str = str(channel_10_state)
                     channel_11_state_str = str(channel_11_state)
                     # Send data to the respective socket clients
                     try:
-                        conn_5.sendall(channel_5_state_str.encode('utf-8'))
+                        conn_6.sendall(channel_6_state_str.encode('utf-8'))
                     except (ConnectionResetError, BrokenPipeError):
-                        print("Channel 5 client disconnected. Waiting for new connection...")
-                        conn_5, addr_5 = server_socket_5.accept()
-                        print(f"New connection from {addr_5}")
+                        print("Channel 6 client disconnected. Waiting for new connection...")
+                        conn_6, addr_6 = server_socket_6.accept()
+                        print(f"New connection from {addr_6}")
+
+                    try:
+                        conn_7.sendall(channel_7_state_str.encode('utf-8'))
+                    except (ConnectionResetError, BrokenPipeError):
+                        print("Channel 7 client disconnected. Waiting for new connection...")
+                        conn_7, addr_7 = server_socket_7.accept()
+                        print(f"New connection from {addr_7}")
+
+                    #try:
+                        #conn_10.sendall(channel_10_state_str.encode('utf-8'))
+                    #except (ConnectionResetError, BrokenPipeError):
+                        #print("Channel 10 client disconnected. Waiting for new connection...")
+                        #conn_10, addr_10 = server_socket_10.accept()
+                        #print(f"New connection from {addr_10}")
 
                     try:
                         conn_11.sendall(channel_11_state_str.encode('utf-8'))
@@ -125,7 +157,11 @@ with serial.Serial(args.port, args.baud, timeout=2) as ser:
                 break
 
 # Close connections when done
-conn_5.close()
+conn_6.close()
+conn_7.close()
+#conn_10.close()
 conn_11.close()
-server_socket_5.close()
+server_socket_6.close()
+server_socket_7.close()
+#server_socket_10.close()
 server_socket_11.close()
