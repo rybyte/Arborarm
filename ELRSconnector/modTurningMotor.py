@@ -31,7 +31,7 @@ def stop_motor():
 def listen_socket():
     global current
     HOST = 'localhost'
-    PORT = 65432
+    PORT = 65431
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
         client_socket.connect((HOST, PORT))
