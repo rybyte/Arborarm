@@ -1,31 +1,27 @@
-from gpiozero import Servo
+from gpiozero import AngularServo
 from time import sleep
 import threading
 import socket
 from signal import pause
 
-from gpiozero.pins.pigpio import PiGPIOFactory
+SERVO_PIN = 13  # BCM pin number
+servo = AngularServo(
+    SERVO_PIN,
+    min_angle=0,
+    max_angle=180,
+    min_pulse_width=0.0005,
+    max_pulse_width=0.0025
+)
 
-# Use pigpio for more accurate PWM
-factory = PiGPIOFactory()
-
-# Define GPIO pin (BCM numbering)
-SERVO_PIN = 13  # GPIO13 (Pin 33)
-servo = Servo(SERVO_PIN, pin_factory=factory, min_pulse_width=0.0005, max_pulse_width=0.0025)
-
-# Track current servo angle
 current_angle = 140
-
-def angle_to_value(angle):
-    """Convert angle (0 to 180) to gpiozero Servo value (-1 to 1)"""
-    return max(-1.0, min(1.0, (angle - 90) / 90.0))  # Clamp between -1 and 1
 
 def set_servo_angle(angle):
     global current_angle
-    current_angle = angle
-    servo_value = angle_to_value(angle)
-    servo.value = servo_value
-    sleep(0.1)
+    if angle != current_angle:
+        current_angle = angle
+        servo.angle = angle
+        print(f"Set servo angle to {angle}")
+        sleep(0.1)
 
 def listen_socket():
     global current_angle
@@ -44,26 +40,22 @@ def listen_socket():
             data_str = data.decode('utf-8').strip()
             try:
                 channel_value = int(data_str)
-                if channel_value < 1600 and channel_value > 100:
+                if 100 < channel_value < 1600:
                     angle = 80
-                elif channel_value > 1600 and channel_value < 1800:
+                elif 1600 < channel_value < 1800:
                     angle = 140
                 else:
                     angle = current_angle
 
-                print(angle)
-                if angle is not None and abs(current_angle - angle) >= 5:
+                if abs(current_angle - angle) >= 5:
                     set_servo_angle(angle)
-                    print(f"Received RC input: {channel_value}, Setting servo angle: {angle:.2f}")
-
+                    print(f"RC input: {channel_value}, Servo angle: {angle}")
             except ValueError:
                 print(f"Invalid data received: {data_str}")
 
-# Start socket listener in a thread
+# Start socket listener in background
 socket_thread = threading.Thread(target=listen_socket, daemon=True)
 socket_thread.start()
 
-print("Starting Claw")
-print("Listening for socket commands...")
-
+print("AngularServo (software PWM) initialized and listening...")
 pause()
