@@ -45,7 +45,7 @@ fi
 
 # ───── RPi Camera v1.3 via libcamera ─────
 echo "Starting RPi Camera 1.3 stream to FIFO..."
-libcamera-vid -t 0 --inline --width 640 --height 480 --framerate $FRAMERATE -o $FIFO &
+libcamera-vid -t 0 --inline --nopreview --width 640 --height 480 --framerate $FRAMERATE -o $FIFO &
 
 echo "Streaming RPi Camera from FIFO to udp://@$PC_IP:$RPICAM_PORT..."
 ffmpeg -f h264 -i $FIFO \
