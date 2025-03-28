@@ -11,7 +11,7 @@ fi
 
 # Identify Camera Devices
 USB_CAM="/dev/video0"
-ARDU_CAM="/dev/video1"
+#ARDU_CAM="/dev/video1"
 
 # Check if cameras exist
 if [ ! -e "$USB_CAM" ]; then
@@ -19,18 +19,23 @@ if [ ! -e "$USB_CAM" ]; then
     exit 1
 fi
 
-if [ ! -e "$ARDU_CAM" ]; then
-    echo "Error: ArduCam not found at $ARDU_CAM!"
-    exit 1
-fi
-
 # Define Streaming Parameters
 PC_IP="239.255.1.1"  # Mulitcast IP (type in udp://@<PC_IP>:<port_no.> on VLC to stream video)
 USB_PORT="1234"       # USB Camera UDP Port
-ARDU_PORT="1235"      # ArduCam UDP Port
+RPICAM_PORT="1235"      # ArduCam UDP Port
 RESOLUTION="640x480"
 FRAMERATE="30"
 FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"  # Change font path if needed
+
+# Kill previous instances and clean up FIFO
+pkill libcamera-vid
+pkill ffmpeg
+rm -f $FIFO
+mkfifo $FIFO
+
+# Start RPi Cam (v1.3) stream → FIFO
+echo "Starting RPi Camera 1.3 stream to FIFO..."
+libcamera-vid -t 0 --inline --width 640 --height 480 --framerate $FRAMERATE -o $FIFO &
 
 # Start USB Camera Stream with Text Overlay
 echo "Starting USB Webcam Stream on udp://$PC_IP:$USB_PORT..."
@@ -39,18 +44,18 @@ ffmpeg -f v4l2 -framerate $FRAMERATE -video_size $RESOLUTION -i $USB_CAM \
      drawtext=fontfile=$FONT: text='ARM Camera': fontcolor=yellow: fontsize=15: x=10: y=h-30" \
 -f mpegts udp://$PC_IP:$USB_PORT &
 
-# Start ArduCam Stream with Text Overlay
-echo "Starting ArduCam Stream on udp://$PC_IP:$ARDU_PORT..."
-ffmpeg -f v4l2 -framerate $FRAMERATE -video_size $RESOLUTION -i $ARDU_CAM \
+# Start RPi Camera Stream from FIFO
+echo "Starting RPi Camera Stream on udp://$PC_IP:$RPICAM_PORT..."
+ffmpeg -f h264 -i $FIFO \
 -vf "drawtext=fontfile=$FONT: text='%{localtime}': fontcolor=white: fontsize=20: x=w-tw-10: y=h-th-10, \
-     drawtext=fontfile=$FONT: text='ARM Camera': fontcolor=yellow: fontsize=20: x=10: y=h-30" \
--f mpegts udp://$PC_IP:$ARDU_PORT &
+     drawtext=fontfile=$FONT: text='RPi Camera': fontcolor=yellow: fontsize=20: x=10: y=h-30" \
+-f mpegts udp://$PC_IP:$RPICAM_PORT &
 
 # Display Instructions
 echo "Both cameras are now streaming with timestamps!"
 echo "To view the streams on your PC using VLC:"
 echo "  USB Webcam: udp://@239.225.1.1:1234"
-echo "  ArduCam: udp://@239.225.1.1:1235"
+echo "  RPICam: udp://@239.225.1.1:1235"
 
 # Keep script running
 wait
