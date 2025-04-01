@@ -1,21 +1,43 @@
 #!/usr/bin/env bash
-#!/bin/bash
 
-# Run the first Python script in the background
-python readFromUART.py &
-PID1=$!
+# Run Python scripts in the background and store their PIDs
 
-# Wait for 2 seconds
-sleep 2
+python mergeUART.py & 
+PID5=$!
 
-# Run the second Python script in the background
-python turningMotor.py &
+sleep 5
+
+python modTurningMotor.py & 
+PID3=$!
+
+sleep 1
+
+python modTurningMotor_11.py & 
+PID4=$!
+
+sleep 1
+python clawtest.py &
+#python claw_copy.py & 
 PID2=$!
 
-# Trap SIGINT to kill both processes
-trap 'kill $PID1 $PID2; exit' SIGINT
+sleep 0.5
+
+./dual_cam.sh &
+PID6=$!
+
+# Function to handle cleanup
+cleanup() {
+    echo "Stopping all processes..."
+    #kill $PID1 $PID2 $PID3 $PID4 2>/dev/null
+    kill $PID5 $PID3 $PID4 $PID2 $PID6 2>/dev/null
+    #kill $PID5 $PID3 $PID4 $PID2 2>/dev/null
+
+    wait
+    exit
+}
+
+# Trap SIGINT (Ctrl+C) and call cleanup function
+trap cleanup SIGINT
 
 # Wait indefinitely
 while true; do sleep 1; done
-
-
