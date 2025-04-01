@@ -1,0 +1,208 @@
+.element-x {
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .element-x .div-2 {
+    background-color: #1e1e1e;
+    height: 6699px;
+    position: relative;
+    width: 1920px;
+  }
+  
+  .element-x .overlap-group {
+    background-image: url(https://c.animaapp.com/9xMPmSwX/img/image-24.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 515px;
+    left: 0;
+    position: absolute;
+    top: 1247px;
+    width: 1920px;
+  }
+  
+  .element-x .about-drons {
+    height: 150px;
+    left: 657px;
+    position: relative;
+    top: 168px;
+    width: 609px;
+  }
+  
+  .element-x .arbor-arm {
+    -webkit-text-stroke: 2px #adff00;
+    color: #ffffff;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 70px;
+    font-weight: 400;
+    left: 81px;
+    letter-spacing: 8.40px;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+  }
+  
+  .element-x .text-wrapper-13 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 130px;
+    width: 605px;
+  }
+  
+  .element-x .FPV-DRONE {
+    height: 967px;
+    left: 260px;
+    position: absolute;
+    top: 2054px;
+    width: 1403px;
+  }
+  
+  .element-x .LOGO {
+    height: 1000px;
+    left: 260px;
+    position: absolute;
+    top: 168px;
+    width: 1400px;
+  }
+  
+  .element-x .header {
+    background-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #363636;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    height: 82px;
+    left: 259px;
+    position: absolute;
+    top: -1px;
+    width: 1402px;
+  }
+  
+  .element-x .frame {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .element-x .navbar {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    width: 512px;
+  }
+  
+  .element-x .text-wrapper-14 {
+    color: #ccff00;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x .text-wrapper-15 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 126px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x .text-wrapper-16 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 284px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x .text-wrapper-17 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 429px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x .group-7 {
+    height: 24px;
+    left: 1184px;
+    position: absolute;
+    top: 29px;
+    width: 176px;
+  }
+  
+  .element-x .text-wrapper-18 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1px;
+  }
+  
+  .element-x .text-wrapper-19 {
+    color: #ccff00;
+    font-family: "Montserrat", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 71px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .element-x .text-wrapper-20 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 108px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1px;
+  }
+  
+  .element-x .bg {
+    height: 80px;
+    position: relative;
+    width: 1400px;
+  }
+  

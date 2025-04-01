@@ -1,0 +1,215 @@
+.DRON-TYPES {
+    height: 2548px;
+    left: 260px;
+    position: absolute;
+    top: 3317px;
+    width: 1400px;
+  }
+  
+  .DRON-TYPES .title {
+    height: 85px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1402px;
+  }
+  
+  .DRON-TYPES .types-of-drones {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .DRON-TYPES .rectangle {
+    background-color: #adff00;
+    border-radius: 10000px;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 10px;
+  }
+  
+  .DRON-TYPES .line {
+    height: 2px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 84px;
+    width: 1400px;
+  }
+  
+  .DRON-TYPES .element {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 170px;
+    width: 372px;
+  }
+  
+  .DRON-TYPES .div {
+    color: transparent;
+    font-family: "Montserrat", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .DRON-TYPES .text-wrapper {
+    color: #adff0066;
+  }
+  
+  .DRON-TYPES .span {
+    color: #858585;
+  }
+  
+  .DRON-TYPES .element-2 {
+    height: 582px;
+    left: 0;
+    position: absolute;
+    top: 334px;
+    width: 1214px;
+  }
+  
+  .DRON-TYPES .text-wrapper-2 {
+    color: #adff00;
+  }
+  
+  .DRON-TYPES .text-wrapper-3 {
+    color: #ffffff;
+  }
+  
+  .DRON-TYPES .hardware-as-the {
+    color: transparent;
+    font-family: "Montserrat", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 89px;
+    width: 539px;
+  }
+  
+  .DRON-TYPES .text-wrapper-4 {
+    color: #adff00;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  .DRON-TYPES .text-wrapper-5 {
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .DRON-TYPES .electronics {
+    color: transparent;
+    font-family: "Montserrat", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    left: 669px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 89px;
+    width: 539px;
+  }
+  
+  .DRON-TYPES .text-wrapper-6 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .DRON-TYPES .element-wrapper {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 1028px;
+    width: 599px;
+  }
+  
+  .DRON-TYPES .element-ROV-wrapper {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 1192px;
+    width: 620px;
+  }
+  
+  .DRON-TYPES .div-wrapper {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 1356px;
+    width: 445px;
+  }
+  
+  .DRON-TYPES .element-3 {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 1520px;
+    width: 354px;
+  }
+  
+  .DRON-TYPES .element-4 {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 1684px;
+    width: 664px;
+  }
+  
+  .DRON-TYPES .element-5 {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 1848px;
+    width: 1256px;
+  }
+  
+  .DRON-TYPES .element-6 {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 2012px;
+    width: 991px;
+  }
+  
+  .DRON-TYPES .element-7 {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 2176px;
+    width: 449px;
+  }
+  
+  .DRON-TYPES .element-8 {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 2340px;
+    width: 755px;
+  }
+  
+  .DRON-TYPES .element-9 {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 2504px;
+    width: 914px;
+  }
+  

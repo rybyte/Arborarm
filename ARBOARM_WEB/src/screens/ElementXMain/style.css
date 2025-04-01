@@ -1,0 +1,737 @@
+.element-x-MAIN {
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .element-x-MAIN .div {
+    background-color: #1e1e1e;
+    height: 5709px;
+    position: relative;
+    width: 1920px;
+  }
+  
+  .element-x-MAIN .header {
+    background-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #363636;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    height: 82px;
+    left: 259px;
+    position: absolute;
+    top: -1px;
+    width: 1402px;
+  }
+  
+  .element-x-MAIN .frame {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .element-x-MAIN .navbar {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    width: 512px;
+  }
+  
+  .element-x-MAIN .text-wrapper {
+    color: #ccff00;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x-MAIN .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 126px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x-MAIN .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 284px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x-MAIN .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 429px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x-MAIN .group {
+    height: 24px;
+    left: 1184px;
+    position: absolute;
+    top: 29px;
+    width: 176px;
+  }
+  
+  .element-x-MAIN .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1px;
+  }
+  
+  .element-x-MAIN .text-wrapper-6 {
+    color: #ccff00;
+    font-family: "Montserrat", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 71px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .element-x-MAIN .text-wrapper-7 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 108px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1px;
+  }
+  
+  .element-x-MAIN .bg {
+    height: 80px;
+    position: relative;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .run-stroke {
+    height: 101px;
+    left: 260px;
+    position: absolute;
+    top: 1075px;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .frame-2 {
+    align-items: center;
+    display: inline-flex;
+    gap: 100px;
+    left: 115px;
+    position: absolute;
+    top: 26px;
+  }
+  
+  .element-x-MAIN .text-wrapper-8 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .element-x-MAIN .text-wrapper-9 {
+    color: #adff00;
+    font-family: "Montserrat", Helvetica;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .element-x-MAIN .line {
+    height: 1px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 100px;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .img {
+    height: 1px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .overlap {
+    height: 1157px;
+    left: 260px;
+    position: absolute;
+    top: 2915px;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .vozmozhnosti {
+    height: 1157px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .title {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 118px;
+  }
+  
+  .element-x-MAIN .text-wrapper-10 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .element-x-MAIN .rectangle {
+    background-color: #adff00;
+    border-radius: 10000px;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 10px;
+  }
+  
+  .element-x-MAIN .title-2 {
+    height: 269px;
+    left: 0;
+    position: absolute;
+    top: 352px;
+    width: 1404px;
+  }
+  
+  .element-x-MAIN .hard-ware {
+    -webkit-text-stroke: 2px #ffffff;
+    color: transparent;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 70px;
+    font-weight: 400;
+    left: -1px;
+    letter-spacing: 8.40px;
+    line-height: normal;
+    position: absolute;
+    top: 109px;
+    white-space: nowrap;
+  }
+  
+  .element-x-MAIN .line-2 {
+    height: 2px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 267px;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .line-3 {
+    height: 2px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: -1px;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .p {
+    color: #adff00cc;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 717px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 218px;
+  }
+  
+  .element-x-MAIN .title-3 {
+    height: 159px;
+    left: 0;
+    position: absolute;
+    top: 730px;
+    width: 1404px;
+  }
+  
+  .element-x-MAIN .text-wrapper-11 {
+    -webkit-text-stroke: 2px #ffffff;
+    color: transparent;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 70px;
+    font-weight: 400;
+    left: -1px;
+    letter-spacing: 8.40px;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+  }
+  
+  .element-x-MAIN .line-4 {
+    height: 2px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 157px;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .text-wrapper-12 {
+    color: #adff00cc;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 792px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 108px;
+  }
+  
+  .element-x-MAIN .title-4 {
+    height: 159px;
+    left: 0;
+    position: absolute;
+    top: 998px;
+    width: 1404px;
+  }
+  
+  .element-x-MAIN .text-wrapper-13 {
+    color: #adff00cc;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 860px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 108px;
+  }
+  
+  .element-x-MAIN .title-5 {
+    height: 238px;
+    left: 0;
+    position: absolute;
+    top: 84px;
+    width: 1402px;
+  }
+  
+  .element-x-MAIN .hardware-drone {
+    color: #adff00cc;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 725px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 218px;
+  }
+  
+  .element-x-MAIN .span {
+    color: #adff00cc;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .element-x-MAIN .management {
+    height: 49px;
+    left: 548px;
+    position: absolute;
+    top: 110px;
+    width: 296px;
+  }
+  
+  .element-x-MAIN .drone {
+    -webkit-text-stroke: 2px #adff00;
+    color: #ffffff;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 70px;
+    font-weight: 400;
+    left: -1px;
+    letter-spacing: 8.40px;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+  }
+  
+  .element-x-MAIN .line-5 {
+    height: 2px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .image {
+    height: 222px;
+    left: 10px;
+    object-fit: cover;
+    position: absolute;
+    top: 102px;
+    width: 289px;
+  }
+  
+  .element-x-MAIN .registraciya {
+    height: 510px;
+    left: 471px;
+    position: absolute;
+    top: 4422px;
+    width: 978px;
+  }
+  
+  .element-x-MAIN .overlap-group-wrapper {
+    height: 182px;
+    left: 398px;
+    position: absolute;
+    top: 328px;
+    width: 182px;
+  }
+  
+  .element-x-MAIN .overlap-group {
+    border: 3px solid;
+    border-color: #adff00;
+    border-radius: 92.5px;
+    height: 185px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+    width: 185px;
+  }
+  
+  .element-x-MAIN .ellipse {
+    border: 3px dashed;
+    border-color: #ffffff;
+    border-radius: 71px;
+    height: 142px;
+    left: 19px;
+    position: absolute;
+    top: 18px;
+    width: 142px;
+  }
+  
+  .element-x-MAIN .arrow {
+    height: 41px;
+    left: 70px;
+    position: absolute;
+    top: 68px;
+    width: 41px;
+  }
+  
+  .element-x-MAIN .overlap-wrapper {
+    height: 238px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 982px;
+  }
+  
+  .element-x-MAIN .overlap-2 {
+    height: 236px;
+    left: -2px;
+    position: relative;
+    width: 978px;
+  }
+  
+  .element-x-MAIN .take-the-train {
+    color: #ffffff;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    left: 56px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0px -10px 50px #ffffff26;
+    top: 0;
+  }
+  
+  .element-x-MAIN .and-start-fight {
+    -webkit-text-stroke: 3px #adff00;
+    color: transparent;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-shadow: 0px 0px 75px #ccff0059;
+    top: 118px;
+  }
+  
+  .element-x-MAIN .footer {
+    background-color: transparent;
+    height: 314px;
+    left: 260px;
+    position: absolute;
+    top: 5282px;
+    width: 1400px;
+  }
+  
+  .element-x-MAIN .group-2 {
+    height: 264px;
+    left: 1262px;
+    position: absolute;
+    top: 50px;
+    width: 127px;
+  }
+  
+  .element-x-MAIN .group-3 {
+    height: 185px;
+    left: 0;
+    position: absolute;
+    top: 79px;
+    width: 94px;
+  }
+  
+  .element-x-MAIN .text-wrapper-14 {
+    color: #adff00;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .element-x-MAIN .text-wrapper-15 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 55px;
+  }
+  
+  .element-x-MAIN .text-wrapper-16 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 110px;
+  }
+  
+  .element-x-MAIN .text-wrapper-17 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 165px;
+  }
+  
+  .element-x-MAIN .title-6 {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 129px;
+  }
+  
+  .element-x-MAIN .group-4 {
+    height: 264px;
+    left: 944px;
+    position: absolute;
+    top: 50px;
+    width: 93px;
+  }
+  
+  .element-x-MAIN .group-5 {
+    height: 185px;
+    left: 0;
+    position: absolute;
+    top: 79px;
+    width: 101px;
+  }
+  
+  .element-x-MAIN .title-7 {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 92px;
+  }
+  
+  .element-x-MAIN .group-6 {
+    height: 264px;
+    left: 0;
+    position: absolute;
+    top: 50px;
+    width: 480px;
+  }
+  
+  .element-x-MAIN .by-HJ {
+    color: #adff00;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 244px;
+  }
+  
+  .element-x-MAIN .SUTD-capstone-group {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 79px;
+    width: 476px;
+  }
+  
+  .element-x-MAIN .group-7 {
+    height: 58px;
+    left: 0;
+    position: absolute;
+    top: 142px;
+    width: 477px;
+  }
+  
+  .element-x-MAIN .text-wrapper-18 {
+    color: #858585;
+    font-family: "Montserrat", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-decoration: underline;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .element-x-MAIN .text-wrapper-19 {
+    color: #858585;
+    font-family: "Montserrat", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-decoration: underline;
+    top: 34px;
+    white-space: nowrap;
+  }
+  
+  .element-x-MAIN .title-8 {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 183px;
+  }
+  
+  .element-x-MAIN .image-2 {
+    height: 1039px;
+    left: 0;
+    position: absolute;
+    top: 1526px;
+    width: 1920px;
+  }
+  
+  .element-x-MAIN .text-wrapper-20 {
+    color: #ffffff;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 180px;
+    font-weight: 400;
+    left: 403px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 465px;
+  }
+  
+  .element-x-MAIN .our-client {
+    color: #adff00cc;
+    font-family: "Rubik One-Regular", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    left: 260px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1387px;
+    width: 597px;
+  }
+  

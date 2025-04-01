@@ -1,0 +1,33 @@
+:root {
+    --background: rgba(30, 30, 30, 1);
+    --darkgray: rgba(54, 54, 54, 1);
+    --green: rgba(173, 255, 0, 1);
+    --h-2-font-family: "Rubik One", Helvetica;
+    --h-2-font-size: 70px;
+    --h-2-font-style: normal;
+    --h-2-font-weight: 400;
+    --h-2-letter-spacing: 8.4px;
+    --h-2-line-height: normal;
+    --h-3-font-family: "Montserrat", Helvetica;
+    --h-3-font-size: 20px;
+    --h-3-font-style: normal;
+    --h-3-font-weight: 700;
+    --h-3-letter-spacing: 0px;
+    --h-3-line-height: normal;
+    --h-4-font-family: "Montserrat", Helvetica;
+    --h-4-font-size: 22px;
+    --h-4-font-style: normal;
+    --h-4-font-weight: 600;
+    --h-4-letter-spacing: 0px;
+    --h-4-line-height: normal;
+    --shadow-green-title: 0px 4px 75px 0px rgba(173, 255, 0, 0.35);
+    --shadow-white-title: 0px -10px 50px 0px rgba(255, 255, 255, 0.15);
+    --text-font-family: "Montserrat", Helvetica;
+    --text-font-size: 16px;
+    --text-font-style: normal;
+    --text-font-weight: 400;
+    --text-letter-spacing: 0px;
+    --text-line-height: normal;
+    --white: rgba(255, 255, 255, 1);
+  }
+  
