@@ -9,7 +9,9 @@ This project streams live video from a Raspberry Pi using a YOLO-based object de
 1. **Ensure both your laptop and Raspberry Pi are connected to the same Wi-Fi network.**
 2. **Ping the Pi to get its IP address:**
 
+bash'''
 ping bmopi.local
+'''
 SSH into the Raspberry Pi:
 
 
