@@ -10,7 +10,7 @@ This project streams live video from a Raspberry Pi using a YOLO-based object de
 2. **Ping the Pi to get its IP address:**
 
 
-```bash
+```
 ping bmopi.local
 ```
 SSH into the Raspberry Pi:
